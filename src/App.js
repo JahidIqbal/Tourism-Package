@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/booknow/:id" >
             <ServiceDetails></ServiceDetails>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
           </Route>
         </Switch>
         <Footer></Footer>

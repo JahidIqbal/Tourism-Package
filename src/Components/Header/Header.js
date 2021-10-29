@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hook/useFirebase';
 
 const Header = () => {
+    const { user, handleLogout } = useFirebase();
     return (
         <div className="container">
 
@@ -22,19 +24,19 @@ const Header = () => {
                                 <Link to="/My Orders" className="nav-link text-white">My Orders</Link>
                             </li>
 
-                            <li className="nav-item">
-                                <Link to="/Manage All Orders" className="nav-link text-white">Manage All Orders</Link>
-                            </li>
+
 
                             <li className="nav-item">
                                 <Link to="/Add A New Service" className="nav-link text-white">Add A New Service</Link>
                             </li>
 
+                            {user.email && <span style={{ color: 'white ', fontWeight: 'bold', backgroundColor: '#0dcaf0' }}>Hello, {user.displayName}</span>}
+                            {user.email ? <button className="btn btn-warning me-2" onClick={handleLogout}>logout</button>
 
-                            <li className="nav-item">
-                                <Link to="/login" className="nav-link text-white">Login</Link>
-                            </li>
-
+                                :
+                                <li className="nav-item">
+                                    <Link to="/login" className="nav-link text-white">Login</Link>
+                                </li>}
 
                         </ul>
                     </div>
