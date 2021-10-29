@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Service = (props) => {
-    const { name, image, description } = props.service;
+    const { name, image, description, _id } = props.service;
     return (
         <div>
             <div className="col">
@@ -11,7 +11,7 @@ const Service = (props) => {
                     <div className="card-body">
                         <h5 className="card-title">Country:{name}</h5>
                         <p className="card-text">Description:{description}</p>
-                        <Link to="/">
+                        <Link to={`/booknow/${_id}`}>
                             <button className="btn btn-info">Book now</button>
                         </Link>
                     </div>

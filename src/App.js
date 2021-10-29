@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
+import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Switch>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/booknow/:id" >
+            <ServiceDetails></ServiceDetails>
           </Route>
         </Switch>
         <Footer></Footer>
