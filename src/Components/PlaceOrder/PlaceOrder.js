@@ -1,7 +1,8 @@
-import React from 'react';
 import { useForm } from "react-hook-form";
+import useAuth from '../../hook/useAuth';
 
 const PlaceOrder = () => {
+    const { user } = useAuth();
     const {
         register, handleSubmit, reset, formState: { errors }, } = useForm();
     const onSubmit = (data) => {
@@ -35,13 +36,13 @@ const PlaceOrder = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input
                                 {...register("name")}
-                                placeholder="Name"
+                                placeholder="Country name"
                                 className="p-2 m-2"
                             />
                             <br />
 
                             <input
-                                {...register("email", { required: true })}
+                                {...register("email", { required: true })} value={user.email}
                                 placeholder="Email"
                                 className="p-2 m-2"
                             />
@@ -55,19 +56,20 @@ const PlaceOrder = () => {
                             <br />
                             <input
                                 {...register("Address", { required: true })}
-                                placeholder="Address"
+                                placeholder="City"
                                 className="p-2 m-2"
                             />
                             <br />
                             <input
-                                {...register("Phone", { required: true })}
+                                {...register("number", { required: true })}
+
                                 placeholder="Phone number"
                                 className="p-2 m-2"
                             />
                             <br />
                             {errors.exampleRequired && <span>This field is required</span>}
 
-                            <input type="submit" value="Place order" className="btn btn-info w-50" />
+                            <input type="submit" value="Booking" className="btn btn-info w-50" />
                         </form>
 
                     </div>

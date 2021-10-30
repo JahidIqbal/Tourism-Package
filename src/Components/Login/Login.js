@@ -5,7 +5,7 @@ import useAuth from '../../hook/useAuth';
 
 
 const Login = () => {
-    const { signInWithGoogle, setUser, setError } = useAuth();
+    const { user, signInWithGoogle, setUser, setError } = useAuth();
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const onSubmit = data => console.log(data);
@@ -32,7 +32,8 @@ const Login = () => {
                     <div className="login-form mt-4">
                         <form onSubmit={handleSubmit(onSubmit)}>
 
-                            <input name="email" type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} placeholder="Your Email" />
+                            <input name="email" type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                                value={user.email} placeholder="Your Email" />
 
                             <br />
 
