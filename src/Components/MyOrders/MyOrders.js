@@ -38,7 +38,7 @@ const MyOrders = () => {
 
     return (
 
-        <div className="container mt-4">
+        <div className="container mb-4">
             <div>
                 <table className="table table-bordered "  >
                     <thead>
@@ -46,22 +46,27 @@ const MyOrders = () => {
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">city</th>
-                            <th scope="col">Button</th>
                         </tr>
                     </thead>
+
+
                     {
                         myOrder?.map((pd) =>
+
                             <tbody>
                                 <tr>
                                     <td>{pd?.name}</td>
                                     <td>{pd?.email}</td>
                                     <td>{pd?.Address}</td>
-                                    <td> <button onClick={() => handleDelete(pd._id)} className="btn bg-danger p-2 rounded-2">Delete</button></td>
+                                    <button onClick={() => handleDelete(pd._id)} className="btn bg-danger rounded-2">Delete</button>
                                 </tr>
                             </tbody>
+
                         )
 
                     }
+
+
 
 
                 </table>

@@ -4,6 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import ManageAllOrders from './Components/ManageAllOrders/ManageAllOrders';
 import MyOrders from './Components/MyOrders/MyOrders';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
@@ -26,6 +27,9 @@ function App() {
             <PrivateRoute path="/booknow/:id" >
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
+            <Route path="/manageAllOrders" >
+              <ManageAllOrders></ManageAllOrders>
+            </Route>
 
             <Route path="/login">
               <Login></Login>

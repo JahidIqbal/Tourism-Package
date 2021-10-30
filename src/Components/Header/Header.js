@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className="container">
 
-            <nav className="navbar navbar-expand-sm navbar-light bg-info">
+            <nav className="navbar navbar-expand-sm navbar-light bg-info ">
                 <div className="container-fluid ">
                     <Link className="navbar-brand text-white h5" to="/icon">JTourism
                     </Link>
@@ -24,7 +24,9 @@ const Header = () => {
                                 <Link to="/myorders" className="nav-link text-white">My Orders</Link>
                             </li>
 
-
+                            <li className="nav-item">
+                                <Link to="/manageAllOrders" className="nav-link text-white">Manage All Orders</Link>
+                            </li>
 
                             <li className="nav-item">
                                 <Link to="/Add A New Service" className="nav-link text-white">Add A New Service</Link>
