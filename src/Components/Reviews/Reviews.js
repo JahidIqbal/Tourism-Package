@@ -5,7 +5,7 @@ import reviewthree from '../../Images/people-3.jpg'
 const Reviews = () => {
     return (
         <div className="container mt-4">
-            <h2 className="fw-bolder mb-2">People  <span className="text-info">Reviews</span></h2>
+            <h2 className="fw-bolder mb-2">People <span className="text-info">Reviews</span></h2>
             <div className="row text-center">
                 <div className="col-md-4 mb-4 ">
 

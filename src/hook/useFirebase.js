@@ -18,14 +18,9 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
 
-    const handleGoogleLogin = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                setUser(result.user);
+    const signInWithGoogle = () => {
+        return signInWithPopup(auth, provider)
 
-                setError("");
-            })
-            .catch((error) => setError(error.message));
     };
 
     useEffect(() => {
@@ -33,6 +28,8 @@ const useFirebase = () => {
             if (user) {
 
                 setUser(user)
+
+
 
             }
         });
@@ -49,7 +46,9 @@ const useFirebase = () => {
     };
 
     return {
-        handleGoogleLogin,
+        signInWithGoogle,
+        setUser,
+        setError,
         user,
         error,
         handleLogout,

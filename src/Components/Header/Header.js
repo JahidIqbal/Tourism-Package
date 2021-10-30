@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hook/useFirebase';
+import useAuth from '../../hook/useAuth';
 
 const Header = () => {
-    const { user, handleLogout } = useFirebase();
+    const { user, handleLogout } = useAuth();
     return (
         <div className="container">
 
@@ -31,8 +31,8 @@ const Header = () => {
                             </li>
 
                             {user.email && <span style={{ color: 'white ', fontWeight: 'bold', backgroundColor: '#0dcaf0' }}>Hello, {user.displayName}</span>}
-                            {user.email ? <button className="btn btn-warning me-2" onClick={handleLogout}>logout</button>
-
+                            {user.email ?
+                                <button className="btn btn-warning me-2" onClick={handleLogout}>logout</button>
                                 :
                                 <li className="nav-item">
                                     <Link to="/login" className="nav-link text-white">Login</Link>

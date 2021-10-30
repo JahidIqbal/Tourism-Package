@@ -1,11 +1,29 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import useFirebase from '../../hook/useFirebase';
+import { useHistory, useLocation } from 'react-router';
+import useAuth from '../../hook/useAuth';
+
 
 const Login = () => {
-    const { handleGoogleLogin } = useFirebase();
+    const { signInWithGoogle, setUser, setError } = useAuth();
+
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const onSubmit = data => console.log(data);
+
+    const history = useHistory()
+    const location = useLocation()
+
+    const url = location?.state?.from || "/home"
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then((res) => {
+                setUser(res.user)
+                history.push(url)
+            }
+            )
+            .catch((error) => setError(error.message));
+    }
     return (
         <div className="container w-50">
             <h1 className="mt-5 text-center text-info ">Please Login</h1>
