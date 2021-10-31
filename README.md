@@ -9,5 +9,21 @@ This is a tourism website.A tourist can fly over any country where he/she wants.
 https://jtourism-visitors.web.app/
 
 ```bash
-This is a user friendly website for all tourist lover
+This is a user friendly website for all tourist lover.
+```
+
+```bash
+ A user friendly can book any tour package of its choice.
+```
+
+```bash
+A user see all orders in my orders and can also delete the order if it wants.
+```
+
+```bash
+Different User can see its order in manage all orders table
+```
+
+```bash
+A user can also add a tour package apart from website tour package
 ```
