@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className="mt-4 container">
-            <div className="d-flex justify-content-center bd-highlight col-md-12 col-sm-12  px-5 bg-light w-100">
+            <div className="d-flex justify-content-center bd-highlight col-md-12 col-sm-12  px-5 bg-light text-white w-100">
 
                 <div className="p-2  justify-content-center align-items-center bd-highlight ">
                     <div>
@@ -17,7 +17,7 @@ const Footer = () => {
                                 <textarea type="text" className="form-control" placeholder="message" id="pwd" />
                             </div>
                             <br />
-                            <button className="btn btn-primary">Send</button>
+                            <button className="btn btn-dark">Send</button>
                         </form>
                     </div>
 

@@ -3,8 +3,7 @@ import useAuth from '../../hook/useAuth';
 
 const PlaceOrder = () => {
     const { user } = useAuth();
-    const {
-        register, handleSubmit, reset, formState: { errors }, } = useForm();
+    const { register, handleSubmit, reset, formState: { errors }, } = useForm();
     const onSubmit = (data) => {
         const isReady = window.confirm('are you sure to add this order?');
         if (isReady) {

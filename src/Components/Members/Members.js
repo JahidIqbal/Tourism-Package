@@ -9,7 +9,7 @@ const Members = () => {
     return (
 
         <div className="mt-5 bg-light container">
-            <h2 className=" fw-bolder">Our <span className="text-info">Professional</span> Members</h2>
+            <h2 className=" fw-bolder bg-info text-white">Our Professional Members</h2>
             <div className="card-group">
                 <div className="card">
                     <img src={photgrapher} class="card-img-top" alt="..." />

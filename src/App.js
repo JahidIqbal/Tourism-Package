@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AddNewService from './Components/AddNewService/AddNewService';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -27,9 +28,13 @@ function App() {
             <PrivateRoute path="/booknow/:id" >
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
-            <Route path="/manageAllOrders" >
+            <PrivateRoute path="/manageAllOrders" >
               <ManageAllOrders></ManageAllOrders>
-            </Route>
+            </PrivateRoute>
+
+            <PrivateRoute path="/Add A New Service">
+              <AddNewService></AddNewService>
+            </PrivateRoute>
 
             <Route path="/login">
               <Login></Login>
