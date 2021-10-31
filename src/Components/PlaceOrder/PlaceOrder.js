@@ -7,7 +7,7 @@ const PlaceOrder = () => {
     const onSubmit = (data) => {
         const isReady = window.confirm('are you sure to add this order?');
         if (isReady) {
-            fetch('http://localhost:5000/orders', {
+            fetch('https://scary-beast-34499.herokuapp.com/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

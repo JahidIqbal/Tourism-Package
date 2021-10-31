@@ -6,7 +6,7 @@ const ServiceDetails = () => {
     let { id } = useParams();
     const [serviceDetails, setServiceDetails] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/places")
+        fetch("https://scary-beast-34499.herokuapp.com/places")
             .then(res => res.json())
             .then((data) => {
                 const foundService = data.filter(detail => detail._id == id)

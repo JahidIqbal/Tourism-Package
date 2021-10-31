@@ -4,12 +4,12 @@ const ManageAllOrders = () => {
     const [manageOrders, setManageOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/manageAllOrders')
+        fetch('https://scary-beast-34499.herokuapp.com/manageAllOrders')
             .then(res => res.json())
             .then(data => setManageOrders(data))
     }, [])
     const handleRemove = id => {
-        const url = `http://localhost:5000/manageAllOrders/${id}`;
+        const url = `https://scary-beast-34499.herokuapp.com/manageAllOrders/${id}`;
         const isReady = window.confirm('are you sure you want to delete this order?');
         if (isReady) {
             fetch(url, {

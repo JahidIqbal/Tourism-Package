@@ -8,7 +8,7 @@ const MyOrders = () => {
 
     const [myOrder, setMyOrder] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://scary-beast-34499.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 const myOne = data.filter(my => my?.email === mail)
@@ -17,7 +17,7 @@ const MyOrders = () => {
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://scary-beast-34499.herokuapp.com/orders/${id}`;
         const isReady = window.confirm('are you sure you want to delete this order?');
         if (isReady) {
             fetch(url, {
@@ -79,5 +79,3 @@ const MyOrders = () => {
 };
 
 export default MyOrders;
-
-
