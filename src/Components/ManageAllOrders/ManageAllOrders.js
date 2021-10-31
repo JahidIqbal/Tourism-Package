@@ -48,7 +48,7 @@ const ManageAllOrders = () => {
                             <tr>
                                 <td>{pd?.name}</td>
                                 <td>{pd?.email}</td>
-                                <td><button type="button" className="btn btn-info btn-sm" >Approve</button></td>
+                                <td><button type="button" className="btn btn-success btn-sm disabled" >Approved</button></td>
                                 <td>
                                     <button type="button" className="btn btn-danger btn-sm " onClick={() => handleRemove(pd._id)}>Remove</button>
                                 </td>
