@@ -21,7 +21,7 @@ const AddNewService = () => {
 
     return (
         <div className="container ">
-            <h1 className="mt-5 text-center bg-info w-50 mx-auto text-white">Adding New Service <i className="fas fa-user-plus"></i></h1>
+            <h5 className="mt-5 text-center bg-info w-50 mx-auto text-white">Adding New Service <i className="fas fa-user-plus"></i></h5>
             <div className="login-box w-100">
                 <div className="border border d-flex justify-content-center align-items-center bg-light ">
                     <div className="login-form">

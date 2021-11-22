@@ -23,10 +23,10 @@ const Footer = () => {
 
                     <div className="mt-4">
                         <p>Stay Connected with our social Networks</p>
-                        <Link className="fa fa-facebook px-2 text-decoration-none text-dark" to=""></Link>
-                        <Link className="fa fa-linkedin px-2 text-decoration-none text-dark" to=""></Link>
-                        <Link className="fa fa-twitter  px-2 text-decoration-none text-dark" to=""></Link>
-                        <Link className="fa fa-instagram px-2 text-decoration-none text-dark" to=""></Link>
+                        <Link className="fa fa-facebook px-2 text-decoration-none text-white" to=""></Link>
+                        <Link className="fa fa-linkedin px-2 text-decoration-none text-white" to=""></Link>
+                        <Link className="fa fa-twitter  px-2 text-decoration-none text-white" to=""></Link>
+                        <Link className="fa fa-instagram px-2 text-decoration-none text-white" to=""></Link>
                     </div>
                 </div>
 

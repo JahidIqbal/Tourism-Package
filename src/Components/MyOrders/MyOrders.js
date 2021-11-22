@@ -40,9 +40,6 @@ const MyOrders = () => {
 
 
 
-
-
-
     return (
 
         <div className="container mb-4">

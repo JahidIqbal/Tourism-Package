@@ -11,7 +11,7 @@ const Services = () => {
     }, [])
     return (
         <div className="container mx-auto mt-5 bg-light">
-            <h2 className=" fw-bolder bg-info text-white w-100  ">Explore our Tour Packages </h2>
+            <h2 className=" fw-bolder bg-info text-white w-100 ">Explore our Tour Packages </h2>
 
 
             {/* spinner added */}
